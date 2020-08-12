@@ -5,4 +5,6 @@
     - name: whoami
       shell: whoami
     - name: ip
-      shell: ip addr
+      shell: ip addr > /tmp/ansible.txt
+    - name: df
+      shell: df -h >>/tmp/ansible.txt 
