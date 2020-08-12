@@ -4,3 +4,5 @@
       shell: date
     - name: whoami
       shell: whoami
+    - name: ip
+      shell: ip addr
