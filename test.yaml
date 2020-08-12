@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: data
+      shell: date
+    - name: whoami
+      shell: whoami
