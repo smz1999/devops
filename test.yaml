@@ -7,4 +7,6 @@
     - name: ip
       shell: ip addr > /tmp/ansible.txt
     - name: df
-      shell: df -h >>/tmp/ansible.txt 
+      shell: df -h >>/tmp/ansible.txt
+    - name: free
+      shell: free -h >>/tmp/ansible.txt
