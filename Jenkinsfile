@@ -1,21 +1,9 @@
-def jobs = ["JobA", "JobB", "JobC"]
-
-pipeline {
-     agent any 
-     stages {
-         stage('parallel stage') {
-             steps {
-                 script{
-                    for (job in jobs){
-                        stage ('complie') {
-                             echo "${job} complie."
-                        }
-                        stage('build') {
-                               echo "${job} build."
-                        }
-                    }                    
-                 }
-             }
-         }
-     }
- }
+node {
+    stage('Example') {
+        if (env.BRANCH_NAME == 'master') {
+            echo 'I only execute on the master branch'
+        } else {
+            echo 'I execute elsewhere'
+        }
+    }
+}
